@@ -1,15 +1,35 @@
-.container, .container-dark{
+.container-dark {
+  position: relative;
+  color: #faf9f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background: url('../assets/ecobrutalism-opacity.jpg');
+  background-size: cover;
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
 }
 
-.container-dark {
-  background-color: #2f2f2f;
-  color: white;
+.container-dark .header-nav p{
+  transition: 0.25s;
+}
+
+.container-dark .header-nav p:hover{
+  opacity: 95%;
+}
+
+.container-dark .header-nav p {
+  animation: unglowing 1s forwards;
+}
+
+.container-dark .header-nav p:hover {
+  animation: glowing 2s infinite;
 }
 
 .header,
@@ -21,21 +41,58 @@
 }
 
 .header h1 {
-  font-size: 3rem;
-  padding: 1rem;
+  font-size: 8.5rem;
+  padding: 3rem 2rem;
+}
+
+.header p {
+  font-size: 2.75rem;
 }
 
 .header-nav p {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin: 1rem 5rem;
+  animation: unglowing 1s forwards;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+.header-nav p:hover {
+  cursor: pointer;
+  animation: glowing 2s infinite;
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes glowing {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #faf9f6,
+      0 0 10px #faf9f6,
+      0 0 15px #faf9f6,
+      0 0 20px #faf9f6;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #faf9f6,
+      0 0 20px #faf9f6,
+      0 0 30px #faf9f6,
+      0 0 40px #faf9f6;
+  }
+}
+
+@keyframes unglowing {
+  0% {
+    text-shadow:
+      0 0 10px #faf9f6,
+      0 0 20px #faf9f6,
+      0 0 30px #faf9f6,
+      0 0 40px #faf9f6;
+  }
+
+  100% {
+    text-shadow: none;
+  }
 }
