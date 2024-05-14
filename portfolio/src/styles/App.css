@@ -1,6 +1,5 @@
-.container-dark {
+.container-dark, .container-light {
   position: relative;
-  color: #faf9f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +7,21 @@
   height: 100vh;
   width: 100vw;
   transition: background-color 0.5s ease, color 0.5s ease;
-  background: url('../assets/ecobrutalism-opacity.jpg');
   background-size: cover;
   -webkit-user-select: none; /* Chrome, Safari, Opera */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
+}
+
+.container-dark {
+  color: #faf9f6;
+  background: url('../assets/ecobrutalism-opacity.jpg');
+}
+
+.container-light {
+  color: #1d1d1d;
+  background: url('');
 }
 
 .container-dark .header-nav p{
