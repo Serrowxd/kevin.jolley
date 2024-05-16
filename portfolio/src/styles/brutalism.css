@@ -4,25 +4,68 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, #1d1d1d 50%, rgba(29, 29, 29, 0.25) 50%);
 }
 
 .main_background_splitter {
   position: absolute;
-  right: 0;
-  width: 50%;
   height: 100vh;
-  background-image: url("../assets/ecobrutalism.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 50%;
+  right: 0;
   z-index: 1;
+  animation: gradient 20s ease infinite;
 }
 
+@keyframes gradient {
+  0% {
+    background: #AEC6CF;
+  }
+  20% {
+    background: #F3E5AB;
+  }
+  40% {
+    background: #E5D5D0;
+  }
+  60% {
+    background: #D6CED2;
+  }
+  80% {
+    background: #AFCBBD;
+  }
+  100% {
+    background: #AEC6CF;
+  }
+}
+@keyframes gradient_text {
+  0% {
+    color: #AEC6CF;
+  }
+  20% {
+    color: #F3E5AB;
+  }
+  40% {
+    color: #E5D5D0;
+  }
+  60% {
+    color: #D6CED2;
+  }
+  80% {
+    color: #AFCBBD;
+  }
+  100% {
+    color: #AEC6CF;
+  }
+}
 #particles {
   position: absolute;
   height: 100vh;
+  z-index: 0;
+}
+
+.title {
+  display: flex;
+  height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
 }
 
 .title, .title_splitter {
@@ -48,10 +91,11 @@
   color: #1d1d1d;
 }
 .title_splitter .main_title_left {
+  animation: gradient_text 20s ease infinite;
   color: white;
 }
 .title_splitter .main_splitter {
-  padding: 0 5rem;
+  padding-left: 5rem;
 }
 .title_splitter .main_title_right {
   color: #1d1d1d;
