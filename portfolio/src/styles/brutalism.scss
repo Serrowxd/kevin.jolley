@@ -1,0 +1,62 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #1d1d1d 50%, rgba(29, 29, 29, 0.25) 50%);
+}
+
+.main_background_splitter {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url('../assets/ecobrutalism.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+#particles {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+
+.title, .title_splitter{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_container {
+  display: flex;
+  width: 100%;
+
+  .nav_logo img {
+    width: 8rem;
+    padding: 1.5rem;
+    position: absolute;
+  }
+}
+
+.title_splitter {
+  font-size: 16rem;
+  color: #1d1d1d;
+
+  .main_title_left {
+    color: white;
+  }
+
+  .main_splitter {
+    padding: 0 5rem;
+  }
+
+  .main_title_right {
+    color: #1d1d1d;
+  }
+}
