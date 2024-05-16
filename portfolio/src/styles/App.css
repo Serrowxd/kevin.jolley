@@ -16,12 +16,12 @@
 
 .container-dark {
   color: #faf9f6;
-  background: url('../assets/ecobrutalism-opacity.jpg');
+  background: #1d1d1d;
 }
 
 .container-light {
   color: #1d1d1d;
-  background: url('');
+  background: #faf9f6;
 }
 
 .container-dark .header-nav p{
