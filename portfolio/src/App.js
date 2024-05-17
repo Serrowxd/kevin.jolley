@@ -7,12 +7,13 @@ import { loadSlim } from "@tsparticles/slim";
 
 function App() {
   const [init, setInit] = useState(false);
+  const [navScrollController, setNavScrollController] = useState(false);
 
   const words = [
     "SOFTWARE_ENGINEER",
-    "FULL-STACK.WEB_DEVELOPER",
+    "FRONT_END.WEB_DEVELOPER",
     "JAVASCRIPT_ENJOYER",
-    "BACK-END_JAVA_ENGINEER",
+    "BACK_END.JAVA_ENGINEER",
     "PHOTOGRAPHER",
     "WEB_DESIGNER",
   ];
@@ -79,7 +80,7 @@ function App() {
         />
 
         <div className={"main_background_splitter"}></div>
-        <nav className={"nav_container"}>
+        <nav className={navScrollController ? "nav_container" : "nav_container hidden"}>
           {/*<div className={"nav_logo"}>*/}
           {/*  /!*<img src={logo} alt="Logo" />*!/*/}
           {/*</div>*/}
@@ -111,6 +112,12 @@ function App() {
               />
             </div>
           </div>
+        </section>
+        
+        <section>
+        
+        
+        
         </section>
       </div>
     );

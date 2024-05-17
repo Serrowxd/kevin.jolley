@@ -23,6 +23,11 @@
   background: ghostwhite;
 }
 
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
 @keyframes gradient {
   0% {
     background: #FF4500;
