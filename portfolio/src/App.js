@@ -1,5 +1,6 @@
 import "./styles/brutalism.css";
 import { useEffect, useMemo, useState } from "react";
+import { Typewriter, useTypewriter } from "react-simple-typewriter";
 import logo from "./assets/Serrow_C.png";
 import { initParticlesEngine, Particles } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -8,16 +9,18 @@ function App() {
   const [theme, setTheme] = useState(true);
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
+  const words = [
+    "SOFTWARE_ENGINEER",
+    "FULL-STACK.WEB_DEVELOPER",
+    "JAVASCRIPT_ENJOYER",
+    "BACK-END_JAVA_ENGINEER",
+    "PHOTOGRAPHER",
+    "WEB_DESIGNER",
+  ];
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -39,13 +42,6 @@ function App() {
         color: {
           value: "#ffffff",
         },
-        // links: {
-        //   color: "#ffffff",
-        //   distance: 150,
-        //   enable: true,
-        //   opacity: 0.5,
-        //   width: 1,
-        // },
         move: {
           direction: "none",
           enable: true,
@@ -101,7 +97,10 @@ function App() {
               <h1 className={"main_splitter"}>.</h1>
               <h1 className={"main_title_right"}>DEV</h1>
             </div>
-            <h2 className={"title_label"}></h2>
+            {/*<h2 className={"title_label"}>{text}</h2>*/}
+            <div className={"type_container"}>
+              > <Typewriter words={words} loop={true} cursor={true} />
+            </div>
           </div>
         </section>
       </div>
