@@ -4,6 +4,15 @@
   position: relative;
   height: 100vh;
   width: 100%;
+
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
 }
 
 .main_background_splitter {
@@ -63,7 +72,7 @@
   font-size: 3.5rem;
   text-align: center;
   //animation: gradient_text 20s ease infinite;
-  color: #32CD32;
+  color: #FFA500;
 }
 
 .title_container {
@@ -77,11 +86,42 @@
 .nav_container {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+  z-index: 5;
 
   .nav_logo img {
     width: 8rem;
     padding: 1.5rem;
     position: absolute;
+  }
+
+  .nav_logo {
+    color: ghostwhite;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    position: absolute;
+  }
+}
+
+.nav_header {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  color: orange;
+}
+
+.nav_item_container {
+  display: flex;
+  color: #1d1d1d;
+  font-size: 1.5rem;
+
+  .nav_item {
+    margin: 1.5rem;
+    transition: 0.15s ease;
+
+    &:hover {
+      cursor: pointer;
+      color: orange;
+    }
   }
 }
 
@@ -91,14 +131,15 @@
 
   .main_title_left {
     //animation: gradient_text 20s ease infinite;
-    color: #32CD32;
+    color: ghostwhite;
   }
 
   .main_splitter {
    padding-left: 3rem;
+    color: #1d1d1d;
   }
 
   .main_title_right {
-    color: #1d1d1d;
+    color: #FFA500;
   }
 }

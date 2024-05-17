@@ -39,14 +39,14 @@ function App() {
       fpsLimit: 120,
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#FFA500",
         },
         move: {
-          direction: "none",
+          direction: "left",
           enable: true,
-          random: false,
-          speed: 1,
-          straight: false,
+          random: true,
+          speed: 2,
+          straight: true,
         },
         number: {
           density: {
@@ -55,13 +55,13 @@ function App() {
           value: 80,
         },
         opacity: {
-          value: 0.5,
+          value: 0.25,
         },
         shape: {
-          type: "circle",
+          type: "square",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 3, max: 9 },
         },
       },
       detectRetina: true,
@@ -80,8 +80,16 @@ function App() {
 
         <div className={"main_background_splitter"}></div>
         <nav className={"nav_container"}>
-          <div className={"nav_logo"}>
-            <img src={logo} alt="Logo" />
+          {/*<div className={"nav_logo"}>*/}
+          {/*  /!*<img src={logo} alt="Logo" />*!/*/}
+          {/*</div>*/}
+
+          <p className={"nav_header"}>K/J</p>
+
+          <div className={"nav_item_container"}>
+            <p className={"nav_item"}>About</p>
+            <p className={"nav_item"}>Projects</p>
+            <p className={"nav_item"}>Github</p>
           </div>
         </nav>
 
