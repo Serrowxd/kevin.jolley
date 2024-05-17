@@ -72,7 +72,7 @@
   font-size: 3.5rem;
   text-align: center;
   //animation: gradient_text 20s ease infinite;
-  color: #FFA500;
+  color: #ff6d1b;
 }
 
 .title_container {
@@ -106,7 +106,7 @@
 .nav_header {
   font-size: 1.5rem;
   padding: 1.5rem;
-  color: orange;
+  color: #ff6d1b;
 }
 
 .nav_item_container {
@@ -120,7 +120,7 @@
 
     &:hover {
       cursor: pointer;
-      color: orange;
+      color: #ff6d1b;
     }
   }
 }
@@ -140,6 +140,6 @@
   }
 
   .main_title_right {
-    color: #FFA500;
+    color: #ff6d1b;
   }
 }

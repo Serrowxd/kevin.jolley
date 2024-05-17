@@ -39,7 +39,7 @@ function App() {
       fpsLimit: 120,
       particles: {
         color: {
-          value: "#FFA500",
+          value: "#ff6d1b",
         },
         move: {
           direction: "left",
@@ -102,7 +102,13 @@ function App() {
             </div>
             {/*<h2 className={"title_label"}>{text}</h2>*/}
             <div className={"type_container"}>
-              > <Typewriter words={words} loop={true} cursor={true} />
+              >{" "}
+              <Typewriter
+                words={words}
+                loop={true}
+                cursor={true}
+                cursorStyle={"_"}
+              />
             </div>
           </div>
         </section>
