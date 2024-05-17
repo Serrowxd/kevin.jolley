@@ -62,8 +62,8 @@
 .type_container, .type_container span {
   font-size: 3.5rem;
   text-align: center;
-  animation: gradient_text 20s ease infinite;
-  color: orange;
+  //animation: gradient_text 20s ease infinite;
+  color: #32CD32;
 }
 
 .title_container {
@@ -90,8 +90,8 @@
   color: #1d1d1d;
 
   .main_title_left {
-    animation: gradient_text 20s ease infinite;
-    color: orange;
+    //animation: gradient_text 20s ease infinite;
+    color: #32CD32;
   }
 
   .main_splitter {

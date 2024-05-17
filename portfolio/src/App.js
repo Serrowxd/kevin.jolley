@@ -1,12 +1,11 @@
 import "./styles/brutalism.css";
 import { useEffect, useMemo, useState } from "react";
-import { Typewriter, useTypewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import logo from "./assets/Serrow_C.png";
 import { initParticlesEngine, Particles } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 function App() {
-  const [theme, setTheme] = useState(true);
   const [init, setInit] = useState(false);
 
   const words = [
@@ -69,10 +68,6 @@ function App() {
     }),
     [],
   );
-
-  const themeHandler = () => {
-    setTheme(!theme);
-  };
 
   if (init) {
     return (
