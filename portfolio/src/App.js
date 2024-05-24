@@ -30,54 +30,14 @@ function App() {
     console.log(container);
   };
 
-  const options = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: "#1d1d1d",
-        },
-      },
-      fpsLimit: 120,
-      particles: {
-        color: {
-          value: "#ff6d1b",
-        },
-        move: {
-          direction: "left",
-          enable: true,
-          random: true,
-          speed: 2,
-          straight: true,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.25,
-        },
-        shape: {
-          type: "square",
-        },
-        size: {
-          value: { min: 3, max: 9 },
-        },
-      },
-      detectRetina: true,
-    }),
-    [],
-  );
-
   if (init) {
     return (
       <div className={"main"}>
-        <Particles
-          id="particles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
+        {/*<Particles*/}
+        {/*  id="particles"*/}
+        {/*  particlesLoaded={particlesLoaded}*/}
+        {/*  options={options}*/}
+        {/*/>*/}
 
         <div className={"main_background_splitter"}></div>
         <nav className={navScrollController ? "nav_container" : "nav_container hidden"}>
@@ -93,7 +53,7 @@ function App() {
             <p className={"nav_item"}>Github</p>
           </div>
         </nav>
-
+        
         <section className={"section title"}>
           <div className={"title_container"}>
             <div className={"title_splitter"}>
@@ -101,9 +61,7 @@ function App() {
               <h1 className={"main_splitter"}>.</h1>
               <h1 className={"main_title_right"}>DEV</h1>
             </div>
-            {/*<h2 className={"title_label"}>{text}</h2>*/}
             <div className={"type_container"}>
-              >{" "}
               <Typewriter
                 words={words}
                 loop={true}
@@ -116,9 +74,15 @@ function App() {
         
         <section>
         
+        {/*  When you click a link, I want to animate the page to go left or right depending on what you selected. */}
+        {/*  Left will be the "about" page */}
+        {/*  Right will be the "Projects" page */}
+        
+        
         
         
         </section>
+        
       </div>
     );
   }
